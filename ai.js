@@ -113,11 +113,11 @@ const loadData = async (dataLimit, sortByDate) => {
           <div class="row">
             <div class="col-md-4 mb-3 mb-md-0">
               <p class="text-success rounded p-4 text-center  text-green" style="background-color: #ebe9e9;">${modal.pricing ? modal.pricing[0].plan : 'Free Plan/ '}</br>
-              ${modal.pricing ? modal.pricing[0].price : 'Basic'}</p>
+              ${modal.pricing ? modal.pricing[0].price : 'Basic Plan'}</p>
             </div>
             <div class="col-md-4 mb-3 mb-md-0">
               <p class="text-success rounded p-4 text-center  text-orange" style="background-color: #ebe9e9;">${modal.pricing ? modal.pricing[1].plan : 'Free Plan/ '}</br>
-              ${modal.pricing ? modal.pricing[1].price : 'Pro'}</p>
+              ${modal.pricing ? modal.pricing[1].price : 'Professional Plan'}</p>
             </div>
             <div class="col-md-4">
               <p class="text-success rounded p-4 text-center  text-danger" style="background-color: #ebe9e9;">${modal.pricing ? modal.pricing[2].plan : 'Free Plan/ '}
