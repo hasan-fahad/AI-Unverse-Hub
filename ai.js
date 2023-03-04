@@ -61,12 +61,12 @@ const loadData = async (dataLimit, sortByDate) => {
       showAllButton.classList.remove("d-none");
     }
     
-    // Hide the loader
+    // HIDDEN SIDE OF THE LOADER SECTION
     toggleSpinner(false);
   };
   
   const toggleSpinner = isLoading =>{
-    const loaderSection = document.getElementById('loader');
+    const loaderSection = document.getElementById('loader-hidden');
     if(isLoading){
         loaderSection.classList.remove('d-none')
     }else{
@@ -79,18 +79,19 @@ const loadData = async (dataLimit, sortByDate) => {
     loadData(dataLimit);
   };
   
-  document.getElementById("btn-show-all").addEventListener("click", function () {
+  document.getElementById("button-show-all").addEventListener("click", function () {
     
     searchProcess();
   });
   
-  // Sort the tools 
+  // SORT THE TOOLS BY DATE SECTION
+
   const sortButton = document.querySelector(".btn-danger").addEventListener("click", () => {
     loadData(null, true);
   });
   
   
-  // // Modal functional
+  // MODAL SECTION
   const loadDetails= async id =>{
     const url =`https://openapi.programming-hero.com/api/ai/tool/${id}`;
     const res = await fetch(url);
@@ -100,7 +101,8 @@ const loadData = async (dataLimit, sortByDate) => {
   
   const displayDetails = modal =>{
     console.log(modal);
-    const modalContainer = document.getElementById("modal-container");
+    const modalContainer = document.getElementById("container-modal");
+
     modalContainer.innerHTML = ''; 
     const modalDiv = document.createElement("div");
     modalDiv.classList.add("row");
