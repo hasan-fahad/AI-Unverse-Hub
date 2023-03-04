@@ -17,7 +17,7 @@ const loadData = async (dataLimit, sortByDate) => {
   };
   
   const displayTools = (tools, dataLimit) => {
-    const toolsContainer = document.getElementById("tools-container");
+    const toolsContainer = document.getElementById("tools-container-main");
     toolsContainer.innerHTML = ""; 
     let displayedTools;
   
@@ -54,7 +54,7 @@ const loadData = async (dataLimit, sortByDate) => {
       toolsContainer.appendChild(toolsDiv);
     });
     
-    const showAllButton = document.getElementById("show-all");
+    const showAllButton = document.getElementById("show-all-button");
     if (!dataLimit || dataLimit >= tools.length) {
       showAllButton.classList.add("d-none");
     } else {
