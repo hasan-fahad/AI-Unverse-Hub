@@ -1,6 +1,6 @@
-//Data display and show 
+//DISPLAY AND SHOW THE LOADER 
 const loadData = async (dataLimit, sortByDate) => {
-    // Show the loader
+    
     toggleSpinner(true);
     const url = "https://openapi.programming-hero.com/api/ai/tools";
     const response = await fetch(url);
@@ -8,7 +8,7 @@ const loadData = async (dataLimit, sortByDate) => {
   
     let tools = data.data.tools;
   
-    // Sort tools by date in ascending order
+    // SORT TOOLS BY DATE SECTION
     if (sortByDate) {
       tools = tools.sort((a, b) => new Date(a.published_in) - new Date(b.published_in));
     }
